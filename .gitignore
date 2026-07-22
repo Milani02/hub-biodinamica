@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# material de referência / rascunho — não usado pelo app
+/ref-body.html
+/ref-source.html
+/ref-styles.css
+/ref.png
+/screenshot.png
+/public/spline-test.html
+/public/spline-viewer.html
+/icones/

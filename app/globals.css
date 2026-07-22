@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  --border: 240 5.9% 90%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 240 4.8% 95.9%;
+  --border: 240 3.7% 15.9%;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.4s ease-out both;
+}
+
+/* faixa de obra — listras andando, tipo barra de progresso animada */
+@keyframes hazard-scroll {
+  from { background-position: 28px 0; }
+  to   { background-position: 0 0; }
+}
+.animate-hazard-scroll {
+  animation: hazard-scroll 1s linear infinite;
+}
+
+/* brilho de "scanner" passando pelo card */
+@keyframes dev-shimmer {
+  0%   { transform: translateX(-60%); opacity: 0; }
+  8%   { opacity: 1; }
+  35%  { transform: translateX(220%); opacity: 0; }
+  100% { transform: translateX(220%); opacity: 0; }
+}
+.animate-dev-shimmer {
+  animation: dev-shimmer 3.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hazard-scroll,
+  .animate-dev-shimmer {
+    animation: none;
+  }
 }
