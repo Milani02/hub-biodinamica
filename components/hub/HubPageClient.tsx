@@ -121,7 +121,7 @@ export function HubPageClient() {
         </div>
 
         {/* ── LAYOUT: esquerda | robô | direita ── */}
-        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 relative lg:h-[500px]" style={{ zIndex: 10 }}>
+        <div className="flex flex-col lg:flex-row w-full gap-8 lg:gap-0 relative lg:min-h-[500px]" style={{ zIndex: 10 }}>
 
           {/* ── ESQUERDA ── */}
           <div className="relative flex flex-col justify-center gap-4 lg:p-6 w-full lg:w-[300px]" style={{ zIndex: 10 }}>
