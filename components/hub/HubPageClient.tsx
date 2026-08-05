@@ -8,7 +8,7 @@ import { HubCard } from './HubCard'
 import { SocialLinks } from './SocialLinks'
 import { EmployeeArea } from './EmployeeArea'
 import { DevelopmentArea } from './DevelopmentArea'
-import { leftLinks, portalLinks } from '@/lib/hub-links'
+import { leftLinks, portalLinks, sacLinks } from '@/lib/hub-links'
 
 const SPLINE_SCENE = 'https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode'
 const SPOT_SIZE = 320
@@ -161,6 +161,23 @@ export function HubPageClient() {
             <SocialLinks />
           </div>
 
+        </div>
+
+        {/* ── SAC ── */}
+        <div className="w-full flex flex-col items-center pt-8 relative" style={{ zIndex: 10 }}>
+          <div
+            className="text-[11px] font-medium uppercase tracking-wide mb-3 px-0.5"
+            style={{ color: '#525252' }}
+          >
+            SAC
+          </div>
+          <div className="flex flex-col sm:flex-row w-full gap-2.5 sm:max-w-3xl">
+            {sacLinks.map((link) => (
+              <div key={link.title} className="flex-1">
+                <HubCard link={link} />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* ── EM DESENVOLVIMENTO ── */}

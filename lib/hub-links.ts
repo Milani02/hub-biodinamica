@@ -127,5 +127,28 @@ export interface DevItem {
 export const devItems: DevItem[] = [
   { title: 'ChatBio', icon: 'Bot' },
   { title: 'GED', icon: 'FileText' },
-  { title: 'Sac Biodinâmica', icon: 'Headset' },
+]
+
+export const sacLinks: HubLink[] = [
+  {
+    title: 'Sac Biodinâmica',
+    description: 'Atendimento ao cliente',
+    href: 'https://sac.biodinamica.com.br/',
+    icon: 'Headset',
+    color: '#22c55e',
+  },
+  {
+    title: 'Sac Oraltech',
+    description: 'Atendimento ao cliente',
+    href: 'https://sac.oraltech.com.br/',
+    icon: 'Headset',
+    color: '#06b6d4',
+  },
+  {
+    title: 'Sac Injecta',
+    description: 'Atendimento ao cliente',
+    href: 'https://sac.injecta.com.br/',
+    icon: 'Headset',
+    color: '#f43f5e',
+  },
 ]

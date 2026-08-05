@@ -1,11 +1,11 @@
 'use client'
 
-import { Globe, BookOpen, GraduationCap, Building2, Headphones } from 'lucide-react'
+import { Globe, BookOpen, GraduationCap, Building2, Headphones, Headset } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { HubLink } from '@/lib/hub-links'
 
 const iconMap: Record<string, LucideIcon> = {
-  Globe, BookOpen, GraduationCap, Building2, Headphones,
+  Globe, BookOpen, GraduationCap, Building2, Headphones, Headset,
 }
 
 export function HubCard({ link }: { link: HubLink }) {
