@@ -62,6 +62,13 @@ export const portalLinks: HubLink[] = [
     color: '#22c55e',
   },
   {
+    title: 'PCO Biodinâmica',
+    description: 'Portal PCO',
+    href: 'https://pco.biodinamica.com.br/',
+    icon: 'BookOpen',
+    color: '#10b981',
+  },
+  {
     title: 'Loja Oraltech',
     description: 'Produtos Oraltech',
     href: 'https://oraltech.com.br/',
