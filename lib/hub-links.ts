@@ -28,6 +28,13 @@ export const leftLinks: HubLink[] = [
     icon: 'GraduationCap',
     color: '#a855f7',
   },
+  {
+    title: 'Assinador eletrônico',
+    description: 'Assinatura de documentos',
+    href: 'https://sign.biodinamica.com.br/',
+    icon: 'FileSignature',
+    color: '#14b8a6',
+  },
 ]
 
 export const EMPLOYEE_ACCENT = '#8b5cf6'
